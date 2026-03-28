@@ -1,3 +1,12 @@
+---
+permalink: /
+title: "About"
+author_profile: true
+redirect_from:
+  - /about/
+  - /about.html
+---
+
 I go by Abdi. I'm a third-year integrated master's student in Chemistry (MChem) at the University of Leicester, on track for a first.
 
 Currently, my research sits at the intersection of computational chemistry and nanomaterials. Longer term, I want to work on problems where rigorous simulation and experimental chemistry inform each other rather than run in parallel and work on future interesting scientific problems.

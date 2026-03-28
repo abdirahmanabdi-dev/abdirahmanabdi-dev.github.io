@@ -27,6 +27,6 @@ Most of my research so far has centred on understanding how molecules interact a
 
 ## Contact
 
-aa1462 AT leicester DOT ac DOT uk (academic)
-abdirahman1404 AT outlook DOT com (personal)
-[linkedin.com/in/abdi14](https://linkedin.com/in/abdi14)
+- aa1462 AT leicester DOT ac DOT uk (academic)
+- abdirahman1404 AT outlook DOT com (personal)
+- [linkedin.com/in/abdi14](https://linkedin.com/in/abdi14)

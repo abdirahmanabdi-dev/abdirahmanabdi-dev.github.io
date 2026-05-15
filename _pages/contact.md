@@ -8,8 +8,6 @@ redirect_from:
 
 Fill out the form below and I'll get back to you as soon as I can.
 
-{% assign access_key = site.data.web3forms.api_key | default: site.web3forms_api_key %}
-
 <style>
 .cf-field { margin-bottom: 1.25rem; }
 .cf-field label { display: block; font-size: 13px; font-weight: 500; margin-bottom: 6px; letter-spacing: 0.02em; }
@@ -70,6 +68,10 @@ Fill out the form below and I'll get back to you as soon as I can.
     <textarea id="contact-message" name="message" rows="6" placeholder="Your message…" required></textarea>
   </div>
 
+  <div class="cf-field">
+    <div class="h-captcha" data-captcha="true"></div>
+  </div>
+
   <div style="display:flex; align-items:center; gap:16px; flex-wrap:wrap;">
     <button type="submit" id="cf-btn" class="btn btn--large">
       Send message
@@ -109,3 +111,5 @@ Fill out the form below and I'll get back to you as soon as I can.
     s.style.display = 'block';
   }
 </script>
+
+<script src="https://web3forms.com/client/script.js" async defer></script>

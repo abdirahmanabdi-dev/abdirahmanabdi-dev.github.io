@@ -9,10 +9,10 @@ redirect_from:
 
 {% include base_path %}
 
-You can view my CV below or <a href="/assets/public_cv_hosted.pdf">download the PDF directly</a>.
+Download my CV as a PDF:
 
-<object data="/assets/public_cv_hosted.pdf" type="application/pdf" width="100%" height="800px">
-    <embed src="/assets/public_cv_hosted.pdf" type="application/pdf" width="100%" height="800px">
-        <p>This browser does not support PDFs. Please download the PDF to view it: <a href="/assets/public_cv_hosted.pdf">Download PDF</a>.</p>
-    </embed>
+<object data="/assets/public_cv_hosted.pdf" type="application/pdf" width="100%" height="900px">
+  <embed src="/assets/public_cv_hosted.pdf" type="application/pdf" width="100%" height="900px">
+    <p>Your browser does not support inline PDFs. <a href="/assets/public_cv_hosted.pdf">Download CV (PDF)</a></p>
+  </embed>
 </object>

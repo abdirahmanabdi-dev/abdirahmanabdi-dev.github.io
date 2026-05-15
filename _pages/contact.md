@@ -55,7 +55,11 @@ Fill out the form below and I'll get back to you as soon as I can.
   </div>
 
   <div class="cf-field">
+<<<<<<< HEAD
     <div class="h-captcha" data-sitekey="ee9e1df0-c954-491e-8b70-d64cf6da4864"></div>
+=======
+    <div class="h-captcha" data-captcha="true"></div>
+>>>>>>> a2070b36d81e7c8c72870b1f8c8b8aba575f5e16
   </div>
 
   <div style="display:flex; align-items:center; gap:16px; flex-wrap:wrap;">

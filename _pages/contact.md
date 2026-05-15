@@ -11,12 +11,6 @@ Use the form below to send me a message. The email will include your message, br
 {% assign access_key = site.data.web3forms.api_key | default: site.web3forms_api_key %}
 <form id="contact-form" class="form" action="https://api.web3forms.com/submit" method="POST">
   <input type="hidden" name="access_key" value="{{ access_key }}">
-  {% unless access_key %}
-    <div class="notice notice--danger">
-      <strong>Web3Forms is not configured.</strong> Copy `_data/web3forms.example.yml` to `_data/web3forms.yml` and add your Web3Forms access key.
-    </div>
-  {% endunless %}
-
   <input type="hidden" name="subject" value="New website contact message">
   <input type="hidden" name="redirect" value="/contact/#submitted">
   <input type="hidden" name="email" value="no-reply@abdirahmanabdi-dev.github.io">

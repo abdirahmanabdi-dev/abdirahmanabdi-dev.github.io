@@ -26,9 +26,9 @@ author:
   avatar           : "profile.png"
   name             : "Abdirahman Abdi"
   pronouns         : # example: "she/her"  
-  bio              : "Chemistry MChem Student, 3rd Year"
+  bio              : "MChem Chemistry, University of Leicester"
   location         : "Leicester, United Kingdom"
-  employer         : "Unvieristy of Leicester"
+  employer         : "University of Leicester"
   uri              : # URL
   email            : "aa1462@student.le.ac.uk" 
 
@@ -66,7 +66,7 @@ author:
   keybase          : # Username
   instagram        : # Username
   lastfm           : # Username
-  linkedin         : # Username
+  linkedin         : "abdi14" # Username
   mastodon         : # URL
   medium           : # URL
   pinterest        : # Username

@@ -16,10 +16,31 @@ Fill out the form below and I'll get back to you as soon as I can.
 .cf-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
 .cf-note { font-size: 13px; opacity: 0.6; }
 #cf-success { display: none; }
+.cf-field { margin-bottom: 1.25rem; }
+.cf-field label { display: block; font-size: 13px; font-weight: 500; margin-bottom: 6px; letter-spacing: 0.02em; }
+.cf-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.cf-note { font-size: 13px; opacity: 0.6; }
+#cf-success { display: none; }
+
+/* Dark mode fixes */
+[data-theme="dark"] .cf-field input,
+[data-theme="dark"] .cf-field textarea,
+[data-theme="dark"] .cf-field select {
+  color: #e0e0e0 !important;
+  background-color: #2a2a2a !important;
+  border-color: #555 !important;
+}
+[data-theme="dark"] .cf-field input::placeholder,
+[data-theme="dark"] .cf-field textarea::placeholder {
+  color: #888 !important;
+}
+[data-theme="dark"] .cf-field label {
+  color: #ccc !important;
+}
 </style>
 
 <form id="contact-form" action="https://api.web3forms.com/submit" method="POST">
-  <input type="hidden" name="access_key" value="{{ access_key }}">
+  <input type="hidden" name="access_key" value="a9f63f1d-de60-42dc-9ce4-d57817b0df16">
   <input type="hidden" name="redirect" value="/contact/#submitted">
   <input type="hidden" name="from_name" value="Website Contact Form">
   <input type="hidden" name="ip_address" id="cf-ip" value="Loading...">

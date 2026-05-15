@@ -16,11 +16,6 @@ Fill out the form below and I'll get back to you as soon as I can.
 .cf-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
 .cf-note { font-size: 13px; opacity: 0.6; }
 #cf-success { display: none; }
-.cf-field { margin-bottom: 1.25rem; }
-.cf-field label { display: block; font-size: 13px; font-weight: 500; margin-bottom: 6px; letter-spacing: 0.02em; }
-.cf-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
-.cf-note { font-size: 13px; opacity: 0.6; }
-#cf-success { display: none; }
 
 /* Dark mode fixes */
 [data-theme="dark"] .cf-field input,
@@ -75,10 +70,6 @@ Fill out the form below and I'll get back to you as soon as I can.
     <textarea id="contact-message" name="message" rows="6" placeholder="Your message…" required></textarea>
   </div>
 
-  <div class="cf-field">
-    <div class="h-captcha" data-sitekey="ee9e1df0-c954-491e-8b70-d64cf6da4864"></div>
-  </div>
-
   <div style="display:flex; align-items:center; gap:16px; flex-wrap:wrap;">
     <button type="submit" id="cf-btn" class="btn btn--large">
       Send message
@@ -91,7 +82,6 @@ Fill out the form below and I'll get back to you as soon as I can.
   <p>Thanks! Your message was sent — I'll be in touch soon.</p>
 </div>
 
-<script src="https://js.hcaptcha.com/1/api.js" async defer></script>
 <script>
   document.getElementById('cf-ua').value = navigator.userAgent || 'unknown';
 

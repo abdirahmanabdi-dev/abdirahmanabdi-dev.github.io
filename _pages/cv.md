@@ -1,5 +1,5 @@
 ---
-layout: archive
+layout: single
 title: "CV"
 permalink: /cv/
 author_profile: true
@@ -16,16 +16,3 @@ You can view my CV below or <a href="/assets/public_cv_hosted.pdf">download the 
         <p>This browser does not support PDFs. Please download the PDF to view it: <a href="/assets/public_cv_hosted.pdf">Download PDF</a>.</p>
     </embed>
 </object>
-
-Write your CV here using standard Markdown format. You can add lists, bold text, headings, and links!
-
-## Education
-* MChem in Chemistry, University of Leicester, Expected Graduation
-
-## Experience
-* Role 1
-* Role 2
-
-## Skills
-* Skill 1
-* Skill 2

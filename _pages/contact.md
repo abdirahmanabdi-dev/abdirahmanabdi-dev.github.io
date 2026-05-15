@@ -1,7 +1,7 @@
 ---
 permalink: /contact/
 title: "Contact"
-layout: default
+author_profile: true
 redirect_from:
   - /contact.html
 ---

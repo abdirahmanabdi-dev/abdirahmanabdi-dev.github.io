@@ -6,68 +6,95 @@ redirect_from:
   - /contact.html
 ---
 
-Use the form below to send me a message. The email will include your message, browser user agent, IP address, and estimated location so I can identify spam submissions.
+Fill out the form below and I'll get back to you as soon as I can.
 
 {% assign access_key = site.data.web3forms.api_key | default: site.web3forms_api_key %}
-<form id="contact-form" class="form" action="https://api.web3forms.com/submit" method="POST">
+
+<style>
+.cf-field { margin-bottom: 1.25rem; }
+.cf-field label { display: block; font-size: 13px; font-weight: 500; margin-bottom: 6px; letter-spacing: 0.02em; }
+.cf-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.cf-note { font-size: 13px; opacity: 0.6; }
+#cf-success { display: none; }
+</style>
+
+<form id="contact-form" action="https://api.web3forms.com/submit" method="POST">
   <input type="hidden" name="access_key" value="{{ access_key }}">
-  <input type="hidden" name="subject" value="New website contact message">
   <input type="hidden" name="redirect" value="/contact/#submitted">
-  <input type="hidden" name="email" value="no-reply@abdirahmanabdi-dev.github.io">
-  <input type="hidden" name="captcha" value="true">
-  <input type="hidden" name="ip_address" id="contact-form-ip" value="Loading...">
-  <input type="hidden" name="location" id="contact-form-location" value="Loading...">
-  <input type="hidden" name="user_agent" id="contact-form-useragent" value="">
-  <input type="hidden" name="botcheck" id="contact-form-bot-field" value="">
+  <input type="hidden" name="from_name" value="Website Contact Form">
+  <input type="hidden" name="ip_address" id="cf-ip" value="Loading...">
+  <input type="hidden" name="location" id="cf-location" value="Loading...">
+  <input type="hidden" name="user_agent" id="cf-ua" value="">
+  <input type="hidden" name="botcheck" value="">
 
-  <fieldset>
-    <label for="contact-name">Your name <small class="required">*</small></label>
-    <input type="text" id="contact-name" name="name" required autofocus />
-  </fieldset>
+  <div class="cf-row">
+    <div class="cf-field">
+      <label for="contact-name">Name <small style="color:#c0392b">*</small></label>
+      <input type="text" id="contact-name" name="name" placeholder="Your name" required autofocus />
+    </div>
+    <div class="cf-field">
+      <label for="contact-email">Email <small style="color:#c0392b">*</small></label>
+      <input type="email" id="contact-email" name="email" placeholder="you@example.com" required />
+    </div>
+  </div>
 
-  <fieldset>
-    <label for="contact-message">Message <small class="required">*</small></label>
-    <textarea id="contact-message" name="message" rows="6" required></textarea>
-  </fieldset>
+  <div class="cf-field">
+    <label for="contact-subject">Subject <small style="color:#c0392b">*</small></label>
+    <select id="contact-subject" name="subject" required>
+      <option value="" disabled selected>What's this about?</option>
+      <option>Research collaboration</option>
+      <option>PhD / academic inquiry</option>
+      <option>Speaking / media</option>
+      <option>Other</option>
+    </select>
+  </div>
 
-  <p class="small">The email will include your message plus visitor IP, estimated location, and browser user agent.</p>
+  <div class="cf-field">
+    <label for="contact-message">Message <small style="color:#c0392b">*</small></label>
+    <textarea id="contact-message" name="message" rows="6" placeholder="Your message…" required></textarea>
+  </div>
 
-  <fieldset>
-    <button type="submit" class="btn btn--large">Send message</button>
-  </fieldset>
+  <div class="cf-field">
+    <div class="h-captcha" data-captcha="true"></div>
+  </div>
+
+  <div style="display:flex; align-items:center; gap:16px; flex-wrap:wrap;">
+    <button type="submit" id="cf-btn" class="btn btn--large">
+      Send message
+    </button>
+    <span class="cf-note">Usually replies within a day or two</span>
+  </div>
 </form>
 
-<div id="contact-form-status" class="notice notice--success hidden" style="display: none;">
-  <p>Thanks! Your message was submitted successfully.</p>
+<div id="cf-success" class="notice notice--success">
+  <p>Thanks! Your message was sent — I'll be in touch soon.</p>
 </div>
 
+<script src="https://js.hcaptcha.com/1/api.js" async defer></script>
 <script>
-  var userAgentField = document.getElementById('contact-form-useragent');
-  if (userAgentField) {
-    userAgentField.value = navigator.userAgent || 'unknown';
-  }
-
-  function updateContactDetails(ip, region, country) {
-    var ipField = document.getElementById('contact-form-ip');
-    var locationField = document.getElementById('contact-form-location');
-    if (ipField) ipField.value = ip || 'unknown';
-    if (locationField) locationField.value = (region && country) ? region + ', ' + country : 'unknown';
-  }
+  document.getElementById('cf-ua').value = navigator.userAgent || 'unknown';
 
   fetch('https://ipapi.co/json/')
-    .then(function(response) { return response.json(); })
-    .then(function(data) {
-      updateContactDetails(data.ip, data.region, data.country_name);
+    .then(r => r.json())
+    .then(d => {
+      document.getElementById('cf-ip').value = d.ip || 'unknown';
+      document.getElementById('cf-location').value =
+        (d.region && d.country_name) ? d.region + ', ' + d.country_name : 'unknown';
     })
-    .catch(function() {
-      updateContactDetails('unknown', 'unknown', 'unknown');
+    .catch(() => {
+      document.getElementById('cf-ip').value = 'unknown';
+      document.getElementById('cf-location').value = 'unknown';
     });
 
+  document.getElementById('contact-form').addEventListener('submit', function() {
+    var btn = document.getElementById('cf-btn');
+    btn.disabled = true;
+    btn.textContent = 'Sending…';
+  });
+
   if (window.location.hash === '#submitted') {
-    var status = document.getElementById('contact-form-status');
-    if (status) {
-      status.style.display = 'block';
-      status.classList.remove('hidden');
-    }
+    document.getElementById('contact-form').style.display = 'none';
+    var s = document.getElementById('cf-success');
+    s.style.display = 'block';
   }
 </script>

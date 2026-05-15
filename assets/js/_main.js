@@ -3,10 +3,10 @@
    ========================================================================== */
 
 // Determine the expected state of the theme toggle, which can be "dark", "light", or
-// "system". Default is "dark".
+// "system". Default is "system" when no explicit theme is stored.
 let determineThemeSetting = () => {
   let themeSetting = localStorage.getItem("theme");
-  return (themeSetting != "dark" && themeSetting != "light" && themeSetting != "system") ? "dark" : themeSetting;
+  return (themeSetting != "dark" && themeSetting != "light" && themeSetting != "system") ? "system" : themeSetting;
 };
 
 // Determine the computed theme, which can be "dark" or "light". If the theme setting is
@@ -24,16 +24,20 @@ const browserPref = window.matchMedia('(prefers-color-scheme: dark)').matches ? 
 
 // Set the theme on page load or when explicitly called
 let setTheme = (theme) => {
-  const use_theme =
+  let use_theme =
     theme ||
     localStorage.getItem("theme") ||
     $("html").attr("data-theme") ||
     browserPref;
 
+  if (use_theme === "system") {
+    use_theme = browserPref;
+  }
+
   if (use_theme === "dark") {
     $("html").attr("data-theme", "dark");
     $("#theme-icon").removeClass("fa-moon").addClass("fa-sun");
-  } else if (use_theme === "light") {
+  } else {
     $("html").removeAttr("data-theme");
     $("#theme-icon").removeClass("fa-sun").addClass("fa-moon");
   }
@@ -100,7 +104,10 @@ $(document).ready(function () {
         });
 
   // Enable the theme toggle
-  $('#theme-toggle').on('click', toggleTheme);
+  $('#theme-toggle').on('click', function (event) {
+    event.preventDefault();
+    toggleTheme();
+  });
 
   // Enable the sticky footer
   var bumpIt = function () {

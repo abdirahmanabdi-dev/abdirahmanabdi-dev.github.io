@@ -1,0 +1,3 @@
+# Copy this file to _data/web3forms.yml and add your Web3Forms access key.
+# Keep _data/web3forms.yml out of git so the key is not committed.
+api_key: "YOUR_WEB3FORMS_ACCESS_KEY"

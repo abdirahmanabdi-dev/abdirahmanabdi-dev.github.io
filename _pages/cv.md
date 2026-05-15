@@ -9,11 +9,11 @@ redirect_from:
 
 {% include base_path %}
 
-You can view my CV below or <a href="/assets/sample.pdf">download the PDF directly</a>.
+You can view my CV below or <a href="/assets/public_cv_hosted.pdf">download the PDF directly</a>.
 
-<object data="/assets/sample.pdf" type="application/pdf" width="100%" height="800px">
-    <embed src="/assets/sample.pdf" type="application/pdf" width="100%" height="800px">
-        <p>This browser does not support PDFs. Please download the PDF to view it: <a href="/assets/sample.pdf">Download PDF</a>.</p>
+<object data="/assets/public_cv_hosted.pdf" type="application/pdf" width="100%" height="800px">
+    <embed src="/assets/public_cv_hosted.pdf" type="application/pdf" width="100%" height="800px">
+        <p>This browser does not support PDFs. Please download the PDF to view it: <a href="/assets/public_cv_hosted.pdf">Download PDF</a>.</p>
     </embed>
 </object>
 

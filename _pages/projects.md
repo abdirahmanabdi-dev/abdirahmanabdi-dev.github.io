@@ -15,7 +15,7 @@ Hydrogen bonds play a subtle but important role in atmospheric chemistry, influe
 *University of Leicester — supervised by [Dr. Philip Ash](https://le.ac.uk/people/philip-ash) — Jan 2026 to Mar 2026*
 Carbon quantum dots are a class of nanomaterial with tunable optical properties and promising applications in biosensing and bioimaging. I synthesised nitrogen-doped CQDs from organic precursors via microwave-assisted synthesis, then characterised their surface chemistry and electronic transitions using FTIR and UV-Vis spectroscopy. To assess bioconjugation potential, I coupled the CQDs with myoglobin and analysed the interaction through photoluminescence measurements, looking for spectroscopic shifts indicative of successful surface binding.
 
-<img class="project-image" src="/images/qcd-website-pic.jpg" alt="Carbon quantum dot synthesis and characterisation">
+<img class="project-image" src="/images/cqd-website-pic.jpg" alt="Carbon quantum dot synthesis and characterisation">
 
 **EPSRC Undergraduate Research Internship – Nanoparticle-enabled ionic skin**
 *University of Leicester — supervised by [Prof. Shengfu Yang](https://le.ac.uk/people/shengfu-yang) — Jul 2026 to Sep 2026 (ongoing)*

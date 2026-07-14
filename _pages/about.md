@@ -7,24 +7,30 @@ redirect_from:
   - /about.html
 ---
 
-I'm Abdi — a third-year MChem Chemistry student at the University of Leicester, working at the intersection of computational and experimental chemistry.
+I'm Abdi — a third-year MChem Chemistry student at the University of Leicester with interests spanning computational chemistry, nanomaterials, and the development of new approaches for understanding complex chemical systems.
 
-My current interests centre on quantum mechanical modelling of molecular interactions, particularly the weak, non-covalent forces that are easy to overlook but surprisingly consequential for structure and reactivity. I'm drawn to the gap between what theory can rigorously predict and what actually happens in real chemical systems. Longer term, I'm interested in how quantum computing might make currently intractable calculations feasible, and in pushing simulation methods toward open problems in chemistry.
+My work sits at the intersection of theory and experiment. I am particularly interested in how molecular-scale interactions (from weak intermolecular forces to nanoscale material behaviour) influence the properties and reactivity of chemical systems. I enjoy combining computational modelling with experimental characterisation to develop a deeper understanding of chemistry across different length scales.
 
-## Research
+## Research interests
 
-Both projects were supervised within the School of Chemistry at Leicester.
+My current interests include:
 
-**Computational modelling of hydrogen-bonded complexes** — [Prof. Shengfu Yang](https://le.ac.uk/people/shengfu-yang)
+- **Computational chemistry** — using quantum mechanical methods to investigate molecular interactions, structures, and energetics.
+- **Molecular materials and nanochemistry** — exploring how nanoscale systems can be designed and characterised for emerging applications.
+- **Future computational methods** — understanding how advances such as quantum computing may expand the range of chemical problems that can be simulated.
 
-I used DFT and MP2 methods to model hydrogen-bonded molecular complexes relevant to atmospheric chemistry, studying intermolecular forces and molecular geometries. I applied counterpoise correction (BSSE) to account for basis set superposition error, achieving quantitative agreement with experimental benchmarks.
+I am particularly motivated by the challenge of connecting accurate theoretical predictions with experimentally observable behaviour, helping bridge the gap between models and real chemical systems.
 
-**Carbon quantum dot synthesis and bioconjugation** — [Dr. Philip Ash](https://le.ac.uk/people/philip-ash)
+## Current work
 
-I synthesised nitrogen-doped carbon quantum dots via microwave-assisted synthesis and characterised their surface chemistry using FTIR and UV-Vis spectroscopy. I then investigated their bioconjugation potential through coupling with myoglobin, analysing binding interactions via photoluminescence.
+I am currently undertaking research projects within the School of Chemistry at the University of Leicester, including computational studies of molecular interactions and experimental work involving nanomaterials. Details of my projects, methods, and outcomes can be found on my [Projects](/projects/) page.
+
+## Beyond chemistry
+
+Alongside research, I enjoy developing computational tools to solve scientific problems. I have built projects involving molecular orbital calculations and scientific programming, using Python and numerical methods to translate chemical theory into practical computational workflows.
 
 ## Contact
 
-- aa1462 AT leicester DOT ac DOT uk (academic)
-- abdirahman1404 AT outlook DOT com (personal)
-- [linkedin.com/in/abdi14](https://linkedin.com/in/abdi14)
+- Academic: aa1462 AT leicester DOT ac DOT uk
+- Personal: abdirahman1404 AT outlook DOT com
+- LinkedIn: [linkedin.com/in/abdi14](https://linkedin.com/in/abdi14)

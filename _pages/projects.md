@@ -10,9 +10,9 @@ author_profile: true
 
 A collection of academic research and personal projects I've worked on, ranging from computational chemistry and materials science to physics simulations and scientific computing. Some are serious research projects, some are experiments I started because I was curious, and some are probably a mixture of both.
 
-**## Academic projects**
+## Academic projects
 
-****Computational modelling of hydrogen-bonded atmospheric complexes****
+**Computational modelling of hydrogen-bonded atmospheric complexes**
 
 **University of Leicester — supervised by [Prof. Shengfu Yang](https://le.ac.uk/people/shengfu-yang) — Oct 2025 to Dec 2025**
 
@@ -22,7 +22,7 @@ One of the things I found particularly interesting was how much care is needed w
 
 <img class="project-image" src="/images/frm-dimer.JPG" alt="DFT-optimised formaldehyde dimer geometry">
 
-****Carbon quantum dot synthesis and bioconjugation****
+**Carbon quantum dot synthesis and bioconjugation**
 
 **University of Leicester — supervised by [Dr. Philip Ash](https://le.ac.uk/people/philip-ash) — Jan 2026 to Mar 2026**
 
@@ -32,7 +32,7 @@ I synthesised nitrogen-doped CQDs from organic precursors using microwave-assist
 
 <img class="project-image" src="/images/cqd-website-pic.jpg" alt="Carbon quantum dot synthesis and characterisation">
 
-****EPSRC Undergraduate Research Internship – Nanoparticle-enabled ionic skin****
+**EPSRC Undergraduate Research Internship – Nanoparticle-enabled ionic skin**
 
 **University of Leicester — supervised by [Prof. Shengfu Yang](https://le.ac.uk/people/shengfu-yang) — Jul 2026 to Sep 2026 (ongoing)**
 
@@ -42,11 +42,11 @@ My role involves laboratory-based research, materials characterisation and exper
 
 *As this research is ongoing and unpublished, further technical details will be added once they are suitable for public release.*
 
-**## Coding projects**
+## Coding projects
 
-****Hückel molecular orbital solver****
+**Hückel molecular orbital solver**
 
-**Personal project — [GitHub](https://github.com/abdirahmanabdi-dev/huckel-theory)*
+*Personal project — [GitHub](https://github.com/abdirahmanabdi-dev/huckel-theory)*
 
 I wanted to have a go at implementing Hückel Molecular Orbital (HMO) theory myself rather than just using the equations on paper. The basic idea is that we can simplify the quantum mechanics of conjugated molecules by focusing on their π-electrons and turning the problem into a matrix diagonalisation.
 
@@ -56,9 +56,9 @@ One of the more interesting parts of the project was digging into why this works
 
 The solver currently works with both linear chains and cyclic systems, so it can be used to explore different conjugated molecules and see how changing the molecular structure affects the resulting π-orbitals.
 
-****Basic particle simulation****
+**Basic particle simulation**
 
-**Personal project — [GitHub](https://github.com/abdirahmanabdi-dev/basic-particle-simulation)*
+*Personal project — [GitHub](https://github.com/abdirahmanabdi-dev/basic-particle-simulation)*
 
 Hello, World! I recently discovered a Python library called Taichi, which piqued my interest, so I spent a day experimenting with it and built a very basic 3D particle simulation.
 
